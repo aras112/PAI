@@ -15,6 +15,8 @@ public class DL
         Client kowalski = new Client("Kowalski", pko, zus);
         Client kowalski2 = new Client("Kowalski2", pko, zus);
 
+
+
         pko.addAccount(kowalski);
         pko.addAccount(kowalski2);
         pko.addAccount(zus);

@@ -42,24 +42,24 @@ public class Client implements Runnable
                 }
             }
 
-        while (moneyTransfer > 0&&!Thread.interrupted())
+        while (moneyTransfer > 0 && !Thread.interrupted())
             {
             try
                 {
                 if (thiefNeighbor == false || (bank.getNumberOfMoney(this).compareTo((bank.getNumberOfMoney(friend))) > 0))
+
                     {
                     System.out.println("Pan " + this + " przed przelaniem ma " + bank.getNumberOfMoney(this) + "zł");
                     bank.transfer(this, friend, new BigDecimal("10"));
                     moneyTransfer--;
-                    }
-                else
+                    } else
                     {
                     Thread.sleep(1000);
                     System.out.println(friend + " to sąsiad złodziej!!!!");
+
                     }
                 } catch (InterruptedException e)
                 {
-
                 System.out.println("Przerwano Urzytkownikowi " + this);
                 Thread.currentThread().interrupt();
 

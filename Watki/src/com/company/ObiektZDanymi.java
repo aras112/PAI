@@ -17,7 +17,7 @@ public class ObiektZDanymi
 
     public void funkcja()
     {
-        //lock.lock();
+        lock.lock();
         String napis1=lista.get(1);
 
         lista.remove(1);
@@ -32,7 +32,7 @@ public class ObiektZDanymi
             }
 
         lista.add(1,napis1);
-       // lock.unlock();
+       lock.unlock();
     }
 
 

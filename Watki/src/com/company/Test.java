@@ -17,10 +17,10 @@ public class Test
 
         watek.start();
 
-        //watek.interrupt();
+        watek.interrupt();
         Thread watek2 = new Thread(licznik2);
 
-        watek2.start();
+        //watek2.start();
 
 
 

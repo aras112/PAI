@@ -27,9 +27,9 @@ public class Bank
 
             account.put(from, account.get(from).subtract(amount));
             account.put(to, account.get(to).add(amount));
+            condition.signalAll();
             } finally
             {
-            condition.signalAll();
             lock.unlock();
             }
     }
@@ -53,9 +53,9 @@ public class Bank
 
     public void sendMoney(Client client, BigDecimal amount)
     {
-        lock.lock();
+
         account.put(client, account.get(client).add(amount));
-        lock.unlock();
+
     }
 
 }

@@ -28,7 +28,7 @@ public class LL
         pko.addAccount(kowalski);
         pko.addAccount(kowalski2);
 
-        pko.sendMoney(kowalski, new BigDecimal("60"));
+        pko.sendMoney(kowalski, new BigDecimal("50"));
 
 
         watek1.start();

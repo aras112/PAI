@@ -12,7 +12,7 @@ public class Licznik implements Runnable
     @Override
     public void run()
     {
-        while (true/*!Thread.interrupted()*/)
+        while (Thread.interrupted())
             {
 
            /* try
